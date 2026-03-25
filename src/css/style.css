@@ -1,0 +1,453 @@
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+
+:root {
+  --rosa: #f8d7e3;
+  --preto: #111111;
+  --branco: #ffffff;
+  --cinza: #f2f2f2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: var(--branco);
+  color: var(--preto);
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(17, 17, 17, 0.9);
+  padding: 15px 40px;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+nav a:hover {
+  color: var(--rosa);
+}
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  overflow: hidden;
+}
+
+
+.slides {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.607), rgba(255, 0, 93, 0.595));
+  z-index: 2;
+}
+
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  min-height: 100svh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(56px, 8vw, 90px);
+}
+
+.hero-content p {
+  margin-top: 16px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.hero-divider {
+  width: 100%;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.hero-divider span {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(28px, 5vw, 42px);
+  color: rgb(0, 0, 0);
+  letter-spacing: 2px;
+  opacity: 0.95;
+  text-shadow: 0 4px 12px rgba(222, 90, 90, 0.4);
+}
+
+
+
+.texto {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.texto h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+
+}
+
+.texto p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.texto img {
+  margin-top: 40px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+
+.timeline {
+  background: linear-gradient(rgba(255, 0, 93, 0.552), rgb(0, 0, 0));
+  padding: 100px 20px;
+}
+
+.timeline h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 80px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: white;
+
+}
+
+
+.evento-card {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.667);
+}
+
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(255, 0, 93, 0.35),
+      rgb(0, 0, 0));
+  z-index: 1;
+}
+
+
+.evento-content {
+  position: relative;
+  z-index: 2;
+  padding: 40px;
+  color: white;
+  width: 100%;
+}
+
+.evento-content span {
+  color: white;
+  font-size: 14px;
+  opacity: 0.9;
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+.evento-content p {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+.evento-content {
+  padding: 25px;
+  text-align: left;
+}
+
+.evento-content span {
+  display: block;
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.evento-content p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+.audio-control {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--rosa);
+  border-radius: 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 2000;
+}
+
+
+
+.texto-conteudo {
+  max-width: 700px;
+  text-align: center;
+
+  background: rgb(255, 255, 255);
+  padding: 50px;
+  border-radius: 20px;
+
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+}
+
+.texto {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  background-image: url('/src/imgs/img11.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+
+}
+
+#start-screen {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(rgb(0, 0, 0),
+      rgb(255, 0, 93));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5000;
+}
+
+.start-content {
+  text-align: center;
+  color: white;
+}
+
+.start-content h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 80px;
+}
+
+.start-content p {
+  margin-top: 20px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+/* ===== RESPONSIVO GERAL ===== */
+@media (max-width: 768px) {
+
+  /* MENU */
+  header {
+    padding: 12px 20px;
+  }
+
+  nav {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  /* HERO */
+  .hero-content h1 {
+    font-size: 48px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  /* DIVIDER */
+  .hero-divider {
+    height: 100px;
+    padding: 0 20px;
+  }
+
+  .hero-divider span {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  /* TEXTO COM FUNDO */
+  .texto {
+    padding: 40px 15px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .texto-conteudo {
+    padding: 25px;
+    border-radius: 15px;
+  }
+
+  .texto h2 {
+    font-size: 24px;
+  }
+
+  .texto p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    padding: 60px 15px;
+  }
+
+  .timeline h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  /* CARDS */
+  .evento-card {
+    min-height: auto;
+    border-radius: 15px;
+  }
+
+  .evento-content {
+    padding: 20px;
+  }
+
+  .evento-content span {
+    font-size: 12px;
+  }
+
+  .evento-content p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* AUDIO */
+  .audio-control {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  /* TELA INICIAL */
+  .start-content h1 {
+    font-size: 48px;
+  }
+
+  .start-content p {
+    font-size: 16px;
+  }
+}
+
+
+/* ===== TELAS MUITO PEQUENAS (celular menor) ===== */
+@media (max-width: 480px) {
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-divider span {
+    font-size: 22px;
+  }
+
+  .texto-conteudo {
+    padding: 20px;
+  }
+
+  .evento-content {
+    padding: 15px;
+  }
+
+  .evento-content p {
+    font-size: 13.5px;
+  }
+
+}
